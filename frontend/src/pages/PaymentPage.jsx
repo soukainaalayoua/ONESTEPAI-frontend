@@ -9,7 +9,7 @@ const PaymentPage = () => {
       const token = localStorage.getItem("token");
 
       const res = await axios.post(
-        "http://localhost:3000/api/payment/checkout",
+        "https://onestepai-backend.salayoua.repl.co/api/payment/checkout",
         {},
         {
           headers: {

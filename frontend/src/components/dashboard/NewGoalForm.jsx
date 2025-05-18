@@ -40,11 +40,14 @@ const NewGoalForm = ({ onAddGoal, onCancel, currentGoalsCount }) => {
     setIsLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:3000/api/goals", {
-        title,
-        description,
-        deadline,
-      });
+      const res = await axios.post(
+        "https://onestepai-backend.salayoua.repl.co/api/goals",
+        {
+          title,
+          description,
+          deadline,
+        }
+      );
       onAddGoal(res.data);
       navigate("/dashboard");
     } catch (err) {

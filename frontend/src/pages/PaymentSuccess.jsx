@@ -1,58 +1,3 @@
-// import { useEffect } from "react";
-// import axios from "axios";
-// import { useNavigate } from "react-router-dom";
-
-// const PaymentSuccess = () => {
-//   const navigate = useNavigate();
-
-//   useEffect(() => {
-//     const upgradeUser = async () => {
-//       try {
-//         const token = localStorage.getItem("token");
-//         if (!token) {
-//           console.error("No token found");
-//           return;
-//         }
-
-//         console.log("Sending request to make user Pro...");
-
-//         // 1. Upgrade user to Pro
-//         await axios.patch(
-//           "http://localhost:3000/api/users/make-pro",
-//           {},
-//           {
-//             headers: {
-//               Authorization: `Bearer ${token}`,
-//             },
-//           }
-//         );
-
-//         console.log("User upgraded to Pro! Navigating to Dashboard...");
-
-//         // 3. Navigate to dashboard
-//         navigate("/dashboard");
-//       } catch (error) {
-//         console.error("Error upgrading user:", error);
-//       }
-//     };
-
-//     upgradeUser();
-//   }, [navigate]);
-
-//   return (
-//     <div className="flex flex-col items-center justify-center h-screen bg-green-100">
-//       <h1 className="text-3xl font-bold text-green-800 mb-4">
-//         Payment Successful!
-//       </h1>
-//       <p className="text-green-700 text-lg mb-6">
-//         Redirecting to your dashboard...
-//       </p>
-//     </div>
-//   );
-// };
-
-// export default PaymentSuccess;
-
 import { useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -72,7 +17,7 @@ const PaymentSuccess = () => {
         }
 
         await axios.patch(
-          "http://localhost:3000/api/users/make-pro",
+          "https://onestepai-backend.salayoua.repl.co/api/users/make-pro",
           {},
           {
             headers: {

@@ -34,7 +34,9 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchGoals = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/goals");
+        const res = await axios.get(
+          "https://onestepai-backend.salayoua.repl.co/api/goals"
+        );
         setGoals(res.data);
       } catch (err) {
         console.error(err);
@@ -70,7 +72,9 @@ const Dashboard = () => {
     });
     if (!result.isConfirmed) return;
     try {
-      await axios.delete(`http://localhost:3000/api/goals/${goalId}`);
+      await axios.delete(
+        `https://onestepai-backend.salayoua.repl.co/api/goals/${goalId}`
+      );
       setGoals((prev) => prev.filter((g) => g._id !== goalId));
       Swal.fire("Deleted!", "Goal deleted successfully.", "success");
     } catch {

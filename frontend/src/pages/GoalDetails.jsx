@@ -24,7 +24,7 @@ const GoalDetails = () => {
     const fetchGoal = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/api/goals/${goalId}`
+          `https://onestepai-backend.salayoua.repl.co/api/goals/${goalId}`
         );
         setGoal(res.data);
         setIsLoading(false);
@@ -48,7 +48,9 @@ const GoalDetails = () => {
     setGoal(updatedGoal);
 
     try {
-      await axios.patch(`http://localhost:3000/api/tasks/${taskId}/toggle`);
+      await axios.patch(
+        `https://onestepai-backend.salayoua.repl.co/api/tasks/${taskId}/toggle`
+      );
     } catch (err) {
       setGoal(goal);
       setError("Failed to update task. Please try again.");
@@ -66,7 +68,7 @@ const GoalDetails = () => {
 
     try {
       const res = await axios.post(
-        `http://localhost:3000/api/goals/${goalId}/report`,
+        `https://onestepai-backend.salayoua.repl.co/api/goals/${goalId}/report`,
         {},
         {
           headers: {

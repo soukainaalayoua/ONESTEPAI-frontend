@@ -11,11 +11,14 @@ function GoalsPage() {
   useEffect(() => {
     const fetchGoals = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/goals", {
-          headers: {
-            Authorization: `Bearer ${user.token}`,
-          },
-        });
+        const res = await axios.get(
+          "https://onestepai-backend.salayoua.repl.co/api/goals",
+          {
+            headers: {
+              Authorization: `Bearer ${user.token}`,
+            },
+          }
+        );
         setGoals(res.data);
       } catch (err) {
         console.error("Error fetching goals:", err);
@@ -29,11 +32,14 @@ function GoalsPage() {
 
   const handleDelete = async (goalId) => {
     try {
-      await axios.delete(`http://localhost:3000/api/goals/${goalId}`, {
-        headers: {
-          Authorization: `Bearer ${user.token}`,
-        },
-      });
+      await axios.delete(
+        `https://onestepai-backend.salayoua.repl.co/api/goals/${goalId}`,
+        {
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
+      );
       setGoals(goals.filter((goal) => goal._id !== goalId));
     } catch (err) {
       console.error("Error deleting goal:", err);

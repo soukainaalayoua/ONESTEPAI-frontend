@@ -41,11 +41,14 @@ const Register = () => {
     setIsLoading(true);
 
     try {
-      await axios.post("http://localhost:3000/api/auth/register", {
-        name,
-        email,
-        password,
-      });
+      await axios.post(
+        "https://onestepai-backend.salayoua.repl.co/api/auth/register",
+        {
+          name,
+          email,
+          password,
+        }
+      );
       setShowVerification(true); // Show the code input popup
     } catch (err) {
       console.error(err);
@@ -62,7 +65,7 @@ const Register = () => {
   const handleVerifyCode = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/auth/verify-email",
+        "https://onestepai-backend.salayoua.repl.co/api/auth/verify-email",
         {
           email,
           code: verifyCode,

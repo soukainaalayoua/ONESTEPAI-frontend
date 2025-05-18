@@ -52,7 +52,9 @@ export const AuthProvider = ({ children }) => {
     const fetchUser = async () => {
       if (!token) return setIsLoading(false);
       try {
-        const res = await axios.get("http://localhost:3000/api/auth/user");
+        const res = await axios.get(
+          "https://onestepai-backend.salayoua.repl.co/api/auth/user"
+        );
         setUser({ ...res.data, token });
         setIsAuthenticated(true);
         saveToStorage(res.data, token);
@@ -67,10 +69,13 @@ export const AuthProvider = ({ children }) => {
 
   // login
   const login = useCallback(async (email, password) => {
-    const res = await axios.post("http://localhost:3000/api/auth/login", {
-      email,
-      password,
-    });
+    const res = await axios.post(
+      "https://onestepai-backend.salayoua.repl.co/api/auth/login",
+      {
+        email,
+        password,
+      }
+    );
     const { token: t, ...u } = res.data;
     setUser({ ...u, token: t });
     setToken(t);
@@ -80,18 +85,21 @@ export const AuthProvider = ({ children }) => {
 
   // register (send code only)
   const register = useCallback(async (name, email, password) => {
-    const res = await axios.post("http://localhost:3000/api/auth/register", {
-      name,
-      email,
-      password,
-    });
+    const res = await axios.post(
+      "https://onestepai-backend.salayoua.repl.co/api/auth/register",
+      {
+        name,
+        email,
+        password,
+      }
+    );
     return res.data.message;
   }, []);
 
   // verify (exchange code → token + user)
   const verify = useCallback(async (email, code) => {
     const res = await axios.post(
-      "http://localhost:3000/api/auth/verify-email",
+      "https://onestepai-backend.salayoua.repl.co/api/auth/verify-email",
       {
         email,
         code,
