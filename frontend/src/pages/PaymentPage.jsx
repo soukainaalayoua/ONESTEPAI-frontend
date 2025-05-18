@@ -30,7 +30,7 @@ const PaymentPage = () => {
   };
 
   const handleFreePlan = () => {
-    navigate("/");
+    navigate("/dashboard");
   };
 
   return (

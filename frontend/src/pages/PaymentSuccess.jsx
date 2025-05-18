@@ -28,7 +28,7 @@ const PaymentSuccess = () => {
 
         // Delay before navigating
         setTimeout(() => {
-          navigate("/dashboard");
+          navigate("/");
         }, 5000); // 2.5s for animation
       } catch (error) {
         console.error("Error upgrading user:", error);
