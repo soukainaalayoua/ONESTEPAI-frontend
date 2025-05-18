@@ -42,7 +42,7 @@ const Register = () => {
 
     try {
       await axios.post(
-        "https://handsome-mercury-anorak.glitch.me/api/auth/register",
+        "https://onestepai-backend-production.up.railway.app/api/auth/register",
         {
           name,
           email,
@@ -65,7 +65,7 @@ const Register = () => {
   const handleVerifyCode = async () => {
     try {
       const response = await axios.post(
-        "https://handsome-mercury-anorak.glitch.me/api/auth/verify-email",
+        "https://onestepai-backend-production.up.railway.app/api/auth/verify-email",
         {
           email,
           code: verifyCode,
