@@ -21,7 +21,8 @@ const PaymentPage = () => {
       window.open(res.data.url, "_blank");
 
       setTimeout(() => {
-        window.location.href = "http://localhost:5173/payment-success";
+        window.location.href =
+          "https://onestepai-frontend-urdp.vercel.app/payment-success/payment-success";
       }, 10000);
     } catch (error) {
       console.error("Checkout error:", error);
