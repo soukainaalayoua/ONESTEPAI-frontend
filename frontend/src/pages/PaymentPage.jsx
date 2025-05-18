@@ -22,7 +22,7 @@ const PaymentPage = () => {
 
       setTimeout(() => {
         window.location.href =
-          "https://onestepai-frontend-urdp.vercel.app/payment-success/payment-success";
+          "https://onestepai-frontend-urdp.vercel.app/payment-success";
       }, 10000);
     } catch (error) {
       console.error("Checkout error:", error);
@@ -30,7 +30,7 @@ const PaymentPage = () => {
   };
 
   const handleFreePlan = () => {
-    navigate("/dashboard");
+    navigate("/");
   };
 
   return (
