@@ -99,7 +99,7 @@ export const AuthProvider = ({ children }) => {
   // verify (exchange code → token + user)
   const verify = useCallback(async (email, code) => {
     const res = await axios.post(
-      "https://onestepai-backend-production.up.railway.app/api/auth/verify-email",
+      "https://handsome-mercury-anorak.glitch.me/api/auth/verify-email",
       {
         email,
         code,
