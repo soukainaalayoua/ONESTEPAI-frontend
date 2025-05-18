@@ -35,7 +35,7 @@ const Dashboard = () => {
     const fetchGoals = async () => {
       try {
         const res = await axios.get(
-          "https://onestepai-backend.salayoua.repl.co/api/goals"
+          "https://handsome-mercury-anorak.glitch.me/api/goals"
         );
         setGoals(res.data);
       } catch (err) {
@@ -73,7 +73,7 @@ const Dashboard = () => {
     if (!result.isConfirmed) return;
     try {
       await axios.delete(
-        `https://onestepai-backend.salayoua.repl.co/api/goals/${goalId}`
+        `https://handsome-mercury-anorak.glitch.me/api/goals/${goalId}`
       );
       setGoals((prev) => prev.filter((g) => g._id !== goalId));
       Swal.fire("Deleted!", "Goal deleted successfully.", "success");

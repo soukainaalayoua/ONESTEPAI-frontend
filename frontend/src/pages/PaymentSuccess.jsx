@@ -17,7 +17,7 @@ const PaymentSuccess = () => {
         }
 
         await axios.patch(
-          "https://onestepai-backend.salayoua.repl.co/api/users/make-pro",
+          "https://handsome-mercury-anorak.glitch.me/api/users/make-pro",
           {},
           {
             headers: {

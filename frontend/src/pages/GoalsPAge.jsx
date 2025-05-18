@@ -12,7 +12,7 @@ function GoalsPage() {
     const fetchGoals = async () => {
       try {
         const res = await axios.get(
-          "https://onestepai-backend.salayoua.repl.co/api/goals",
+          "https://handsome-mercury-anorak.glitch.me/api/goals",
           {
             headers: {
               Authorization: `Bearer ${user.token}`,
@@ -33,7 +33,7 @@ function GoalsPage() {
   const handleDelete = async (goalId) => {
     try {
       await axios.delete(
-        `https://onestepai-backend.salayoua.repl.co/api/goals/${goalId}`,
+        `https://handsome-mercury-anorak.glitch.me/api/goals/${goalId}`,
         {
           headers: {
             Authorization: `Bearer ${user.token}`,

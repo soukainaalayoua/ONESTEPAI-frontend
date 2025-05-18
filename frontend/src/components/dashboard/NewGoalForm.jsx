@@ -41,7 +41,7 @@ const NewGoalForm = ({ onAddGoal, onCancel, currentGoalsCount }) => {
 
     try {
       const res = await axios.post(
-        "https://onestepai-backend.salayoua.repl.co/api/goals",
+        "https://handsome-mercury-anorak.glitch.me/api/goals",
         {
           title,
           description,

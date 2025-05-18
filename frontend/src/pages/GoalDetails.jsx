@@ -24,7 +24,7 @@ const GoalDetails = () => {
     const fetchGoal = async () => {
       try {
         const res = await axios.get(
-          `https://onestepai-backend.salayoua.repl.co/api/goals/${goalId}`
+          `https://handsome-mercury-anorak.glitch.me/api/goals/${goalId}`
         );
         setGoal(res.data);
         setIsLoading(false);
@@ -49,7 +49,7 @@ const GoalDetails = () => {
 
     try {
       await axios.patch(
-        `https://onestepai-backend.salayoua.repl.co/api/tasks/${taskId}/toggle`
+        `https://handsome-mercury-anorak.glitch.me/api/tasks/${taskId}/toggle`
       );
     } catch (err) {
       setGoal(goal);
@@ -68,7 +68,7 @@ const GoalDetails = () => {
 
     try {
       const res = await axios.post(
-        `https://onestepai-backend.salayoua.repl.co/api/goals/${goalId}/report`,
+        `https://handsome-mercury-anorak.glitch.me/api/goals/${goalId}/report`,
         {},
         {
           headers: {

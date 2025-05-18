@@ -9,7 +9,7 @@ const PaymentPage = () => {
       const token = localStorage.getItem("token");
 
       const res = await axios.post(
-        "https://onestepai-backend.salayoua.repl.co/api/payment/checkout",
+        "https://handsome-mercury-anorak.glitch.me/api/payment/checkout",
         {},
         {
           headers: {

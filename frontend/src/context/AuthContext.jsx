@@ -53,7 +53,7 @@ export const AuthProvider = ({ children }) => {
       if (!token) return setIsLoading(false);
       try {
         const res = await axios.get(
-          "https://onestepai-backend.salayoua.repl.co/api/auth/user"
+          "https://handsome-mercury-anorak.glitch.me/api/auth/user"
         );
         setUser({ ...res.data, token });
         setIsAuthenticated(true);
@@ -70,7 +70,7 @@ export const AuthProvider = ({ children }) => {
   // login
   const login = useCallback(async (email, password) => {
     const res = await axios.post(
-      "https://onestepai-backend.salayoua.repl.co/api/auth/login",
+      "https://handsome-mercury-anorak.glitch.me/api/auth/login",
       {
         email,
         password,
@@ -86,7 +86,7 @@ export const AuthProvider = ({ children }) => {
   // register (send code only)
   const register = useCallback(async (name, email, password) => {
     const res = await axios.post(
-      "https://onestepai-backend.salayoua.repl.co/api/auth/register",
+      "https://handsome-mercury-anorak.glitch.me/api/auth/register",
       {
         name,
         email,
@@ -99,7 +99,7 @@ export const AuthProvider = ({ children }) => {
   // verify (exchange code → token + user)
   const verify = useCallback(async (email, code) => {
     const res = await axios.post(
-      "https://onestepai-backend.salayoua.repl.co/api/auth/verify-email",
+      "https://handsome-mercury-anorak.glitch.me/api/auth/verify-email",
       {
         email,
         code,
