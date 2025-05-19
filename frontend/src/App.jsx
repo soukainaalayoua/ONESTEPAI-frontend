@@ -13,6 +13,7 @@ import PaymentCancel from "./pages/PaymentCancel";
 import Dashboard from "./components/dashboard/Dashboard";
 import GoalDetails from "./pages/GoalDetails";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
+import CommunityPage from "./components/community/CommunityPage";
 import NotFound from "./components/layout/NotFound";
 
 // Wrapper for page transitions
@@ -66,6 +67,14 @@ function App() {
               element={
                 <PageTransition>
                   <Verify />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/community"
+              element={
+                <PageTransition>
+                  <CommunityPage />
                 </PageTransition>
               }
             />
