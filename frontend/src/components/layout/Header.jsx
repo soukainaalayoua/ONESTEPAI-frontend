@@ -34,6 +34,9 @@ const Header = () => {
                 <Link to="/dashboard" className="hover:underline">
                   Dashboard
                 </Link>
+                <Link to="/community" className="hover:underline">
+                  community
+                </Link>
                 <span className="font-medium">
                   Hi, {user?.name?.split(" ")[0]}
                 </span>
@@ -94,6 +97,13 @@ const Header = () => {
                   className="block hover:underline"
                 >
                   Dashboard
+                </Link>
+                <Link
+                  to="/community"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block hover:underline"
+                >
+                  community
                 </Link>
                 <div className="border-t border-indigo-700 pt-3">
                   <p className="text-sm mb-1">Hi, {user?.name}</p>
